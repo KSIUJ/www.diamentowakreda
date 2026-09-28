@@ -7,3 +7,11 @@ See also the list of [contributors](https://github.com/KSIUJ/www.diamentowakreda
 
 ## License
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE.md](LICENSE.md) file for details.
+
+## Deployment
+
+This is a static site (no build step). It's deployed as a [Cloudflare Worker with static assets](https://developers.cloudflare.com/workers/static-assets/).
+
+- **Deploy:** `npx wrangler deploy` (requires `wrangler login` first, or a `CLOUDFLARE_API_TOKEN` for CI).
+- Config lives in [wrangler.toml](wrangler.toml); files listed in [.assetsignore](.assetsignore) (repo/config files) are excluded from the deployed assets.
+
